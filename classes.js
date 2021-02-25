@@ -8,3 +8,56 @@
 
 
 // Extend Person class and create one class for each member of your family.
+
+class Person  {
+consturctor (attributes) {
+ this.myName = attributes.myName;
+ this.age = attributes.age;
+ this.hobby = attributes.hobby;
+ this.properties = attributes.properties;
+
+}
+ 
+speak() {
+
+    return `hello ${this.myName} , and iam ,${this.age}, ${this.hobby} , ${this.properties}`
+
+}
+
+}
+
+class child extends Person {
+  constructor(childAttributes){
+  super(childAttributes)
+  this.school = childAttributes.school;
+}
+
+}
+
+
+const  dad = new Person ({
+    myName: 'mohamed'
+    age : '35 years old'
+    hobby : 'sports'
+    properties: 'calm person'
+
+})
+
+
+
+const son = new child ({
+    myName: ' seraj'
+    age :   '2 years'
+    hobby : 'soccer'
+    school : 'columbus toddler academy' 
+
+
+})
+
+console,log(dad.speak())
+console.log(son.speak())
+
+
+
+
+
